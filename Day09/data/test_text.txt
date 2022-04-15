@@ -1,0 +1,1 @@
+입력하면 계속 입력해요추가 삽가넝\n 개행문자쓰면 계쏙추가개행문자 못쓰네유...python -u "c:\PythonProject\Day09\day09_3.py"
