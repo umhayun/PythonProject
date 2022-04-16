@@ -38,12 +38,27 @@ b=200
 c=10
 
 sum=calc.Sum(a,b)
-sub=calc.Sub(b,a)
+sub=calc.Sub(a,b)
 mul=calc.Mul(a,c)
 div=calc.Div(b,a)
 
 print(sum,sub,mul,div)
 
-#
-#
-#
+calc.Result=(sum+sub)-int((mul/div))
+print('((a+b)+(b-a))-int((a*c)/(b/a))=',calc.Result)
+
+#(형식2)
+# from모듈 import *
+# =>모듈 내에 있는 모든 변수, 함수와 클래스 호출
+# 모듈에 있는 내용을 사용할 경우 : 함수(변수, 클래스 )명 그대로 사용
+from calc import *
+a=10
+b=20
+c=30
+sum=Sum(a,b)
+sub=Sub(a,b)
+mul=Mul(a,c)
+div=Div(b,a)
+print(sum,sub,mul,div)
+Result=sum+sub+mul+div
+print(Result)

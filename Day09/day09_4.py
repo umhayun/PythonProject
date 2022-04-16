@@ -72,7 +72,7 @@ while True:
 # - 문자열을 암호화하여 파일에 저장할 수 있도록 코드 수정
 # - (문자열을 반복적으로 입력할수 있게 만들어서 처리후 암호화)
 # - 반대로 암호화된 문자열을 복호화하여 화면에 출력할 수 있도록 코드 수정
-
+'''
 while True:
     readstr1,content1="",""
     content2=''
@@ -117,11 +117,18 @@ while True:
     re=input('계속하시겠습니까 (y/n)')
     if re=='n':
         break
-
+'''  
 
 #open()모드에 '+'옵션 사용하기
-
-
+'''
+fileName=input('파일명 입력 : ')
+file=open(fileName,'r+',encoding='utf8')    #r에 +붙이면 읽기쓰기 동시발생
+readstr=file.read()
+print(readstr,end='')
+writestr=input('\n문서에 추가할 내용을 입력하세요 : ')
+file.write(writestr+'\n')
+file.close()
+'''
 #모드 옵션
 #t=>텍스트(문서) =>생략가능
 #b=>바이너리(2진데이터)
@@ -130,3 +137,13 @@ while True:
 
 #복사할 대상(원본) :Day09/data/test.jpg
 #복사할 위치(복사본) :Day09/data/test_copy.jpg
+
+org=input('복사할 대상 : ')
+new=input('복사할 위치 : ')
+
+file=open(org,'rb')
+img=file.read()
+file2=open(new,'wb')
+file2.write(img)
+file.close()
+file2.close()

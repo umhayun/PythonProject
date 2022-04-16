@@ -123,9 +123,13 @@ print(buf3,type(buf3))
 rfile3.close()
 print()
 #문자열 리스트에 "\n"을 제거하여 저장
-buf4=[]
-for i in buf3:
-    buf=i.replace("\n","")
-    buf4.append(buf)
-print(buf4)
+
+for i in range(len(buf3)):
+    buf3[i]=buf3[i].strip('\n')
+    print(buf3[i])
+print(buf3,type(buf3))
+
+#예제4] ord() =>문자를 인코딩 값으로 출력,
+#       chr() => 인코딩 값을 문자열로 출력
+print(hex(ord('안'))) 
 

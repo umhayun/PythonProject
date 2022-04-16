@@ -4,8 +4,10 @@
 def Sum(a,b):
     return a+b
 def Sub(a,b):
-    return a-b
+    return b-a
 def Mul(a,b):
     return a*b
 def Div(a,b):
     return a/b
+
+Result=0 
